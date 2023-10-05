@@ -12,18 +12,17 @@ const Pager = (numPages) => {
   return (
     <Panel backgroundColor="blue">
       <div className="pagination">
-        <a href="#">&laquo;</a>
         {Array.from({ length: 10 }, (e, i) => 
+        // eslint-disable-next-line
           <a 
             key={i+1} 
-            href="#"
+            href="#"  
             onClick={() => handleClick(i)}
             className={currentPage === i ? "active" : ""}
           >
             {i+1}
           </a>
         )}
-        <a href="#">&raquo;</a>
       </div>
     </Panel>
   )
